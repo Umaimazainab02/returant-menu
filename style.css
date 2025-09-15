@@ -15,7 +15,6 @@ body {
     align-items: center;
     margin-top: 70px;
     position: relative;
-    /* add this */
 }
 
 .logo img {
@@ -135,11 +134,9 @@ p:hover {
 
 .food1 h1:hover {
     color: rgb(2, 2, 2);
-    /* text color */
     cursor: pointer;
 }
 
-/* p hover */
 .food1 p:hover {
     color: rgb(2, 2, 2);
     cursor: pointer;
@@ -179,11 +176,8 @@ p:hover {
     top: 20px;
     right: 20px;
     font-size: 20px;
-    /* icon size */
     color: rgb(255, 255, 254);
-    /* icon color */
     z-index: 2;
-    /* image ke upar show ho */
     cursor: pointer;
 }
 
@@ -195,39 +189,52 @@ p:hover {
     gap: 20px;
     font-size: 20px;
     color: white;
-    /* white icon color */
     z-index: 10;
-    /* sab se upar */
 }
 
 .header-icons i:hover {
     color: orange;
-    /* hover color */
     cursor: pointer;
 }
 
 .header-icons i {
     transition: color 0.3s;
-    /* smooth color transition */
 }
 
 .food-category {
     display: flex;
     justify-content: flex-start;
-    /* left side align */
     align-items: center;
-    /* vertically center */
     margin-top: 10px;
     gap: 20px;
-    /* space between categories */
     color: tomato;
 }
 
 .food-category h1 {
-  color: tomato; /* heading ka color tomato */
+  color: tomato; 
 }
 
 .food-category h1:hover {
-  color: rgb(255, 255, 255); /* hover pe orange */
+  color: rgb(255, 255, 255);
   cursor: pointer;
+}
+
+.food-category1 {
+  display: flex;               
+  justify-content: space-between; 
+  align-items: center;         
+  margin: 20px;                 
+  gap: 10px;                     
+}
+
+.food-category1 img {
+  width: 150px;   
+  height: auto;   
+  border-radius: 10px; 
+  cursor: pointer;  
+  transition: transform 0.3s;
+ }
+
+.food-category1 img:hover {
+  transform: scale(1.05); 
 }
