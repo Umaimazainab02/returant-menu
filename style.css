@@ -172,3 +172,12 @@ p:hover {
   object-fit: cover;     
   z-index: 1;           
 }
+.cart-icon {
+  position: absolute;
+  top: 20px;         
+  right: 20px;       
+  font-size: 20px;   /* icon size */
+  color: rgb(255, 255, 254);      /* icon color */
+  z-index: 2;        /* image ke upar show ho */
+  cursor: pointer;
+}
