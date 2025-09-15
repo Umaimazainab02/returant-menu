@@ -20,7 +20,6 @@ body {
 
 .logo img {
     position: absolute;
-    /* circle ke upar layega */
     top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -75,6 +74,7 @@ p:hover {
 
 .login button:hover {
     background-color: rgb(255, 140, 84);
+    color: black;
 }
 
 .signup {
@@ -98,6 +98,7 @@ p:hover {
 
 .signup button:hover {
     background-color: rgb(255, 140, 84);
+    color: black;
 }
 
 .food {
@@ -112,11 +113,9 @@ p:hover {
     height: 150px;
     background-color: rgb(245, 85, 37);
     flex-direction: column;
-    color: rgb(17, 17, 17);
     padding: 10px;
     border-top-left-radius: 10%;
     border-bottom-left-radius: 10%;
-      pointer-events: none;      /* mouse doesn't hide text */
 
 }
 
@@ -132,4 +131,30 @@ p:hover {
     border-top-right-radius: 10%;
     border-bottom-right-radius: 10%;
 
+}
+
+/* h1 hover */
+.food1 h1:hover {
+  color: rgb(2, 2, 2);                     /* text color */
+  cursor: pointer;
+}
+
+/* p hover */
+.food1 p:hover {
+  color: rgb(2, 2, 2);                     
+  cursor: pointer;
+}
+
+.food-pic {
+  display: flex;            /* side by side */
+  justify-content: center;  /* center me */
+  gap: 20px;                /* beech me gap */
+  margin-top: 40px;
+}
+
+.food-pic img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover; /* image cut na ho */
+  display: block;
 }
