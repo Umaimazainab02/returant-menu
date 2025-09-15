@@ -133,7 +133,6 @@ p:hover {
 
 }
 
-/* h1 hover */
 .food1 h1:hover {
   color: rgb(2, 2, 2);                     /* text color */
   cursor: pointer;
@@ -145,16 +144,31 @@ p:hover {
   cursor: pointer;
 }
 
+
+
 .food-pic {
-  display: flex;            /* side by side */
-  justify-content: center;  /* center me */
-  gap: 20px;                /* beech me gap */
-  margin-top: 40px;
+  position: relative;
+  width: 100vw;         
+  height: 50vh;         
+  overflow: hidden;
 }
 
-.food-pic img {
-  width: 200px;
-  height: 150px;
-  object-fit: cover; /* image cut na ho */
-  display: block;
+.food-pic img.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    
+  z-index: 0;
+}
+
+.food-pic img.foreground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     
+  z-index: 1;           
 }
