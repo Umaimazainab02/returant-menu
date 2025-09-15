@@ -207,11 +207,10 @@ p:hover {
     align-items: center;
     margin-top: 10px;
     gap: 20px;
-    color: tomato;
 }
 
 .food-category h1 {
-  color: tomato; 
+  color:  #ff6600; 
 }
 
 .food-category h1:hover {
@@ -219,22 +218,49 @@ p:hover {
   cursor: pointer;
 }
 
-.food-category1 {
-  display: flex;               
-  justify-content: space-between; 
-  align-items: center;         
-  margin: 20px;                 
-  gap: 10px;                     
+.food-items-row {
+    display: flex;                    
+    justify-content: space-between;   
+    gap: 20px;                       
+    margin: 20px;                     /* Outer margin */
+    flex-wrap: wrap;                  /* Mobile responsive wrap */
 }
 
-.food-category1 img {
-  width: 150px;   
-  height: auto;   
-  border-radius: 10px; 
-  cursor: pointer;  
-  transition: transform 0.3s;
- }
+.food-card {
+    display: flex;
+    flex-direction: column;           
+    align-items: center;
+    padding: 10px;
+    width: 120px;                     /* Card width */
+    transition: transform 0.3s;       /* Hover animation */
+}
 
-.food-category1 img:hover {
-  transform: scale(1.05); 
+.food-card img {
+    width: 100%;                      /* Full card width */
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.food-card h3, .food-card h4 {
+    margin: 5px 0;
+    text-align: center;
+    color: beige;
+}
+
+.food-card button {
+    padding: 5px 10px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.food-card button:hover {
+    background-color: #e55b00;
+    transform: scale(1.05);          
+}
+
+.food-card:hover {
+    transform: translateY(-5px);      /* Card hover lift */
 }
