@@ -143,7 +143,6 @@ p:hover {
 }
 
 
-
 .food-pic {
     position: relative;
     width: 100vw;
@@ -222,8 +221,8 @@ p:hover {
     display: flex;                    
     justify-content: space-between;   
     gap: 20px;                       
-    margin: 20px;                     /* Outer margin */
-    flex-wrap: wrap;                  /* Mobile responsive wrap */
+    margin: 20px;                     
+    flex-wrap: wrap;                 
 }
 
 .food-card {
@@ -231,19 +230,19 @@ p:hover {
     flex-direction: column;           
     align-items: center;
     padding: 10px;
-    width: 120px;                     /* Card width */
-    transition: transform 0.3s;       /* Hover animation */
+    width: 120px;                    
+    transition: transform 0.3s;      
 }
 
 .food-card img {
-    width: 100%;                      /* Full card width */
+    width: 100%;                      
     border-radius: 10px;
     margin-bottom: 10px;
 }
 
 .food-card h3, .food-card h4 {
     margin: 5px 0;
-    text-align: center;
+    text-align: left;
     color: beige;
 }
 
@@ -262,5 +261,9 @@ p:hover {
 }
 
 .food-card:hover {
-    transform: translateY(-5px);      /* Card hover lift */
+    transform: translateY(-5px);      
+}
+.card1 h1{
+    text-align: left;
+
 }
