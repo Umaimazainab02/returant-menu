@@ -108,11 +108,10 @@ p:hover {
 }
 
 .food1 {
-    width: 200px;
+    width: 150px;
     height: 150px;
     background-color: rgb(245, 85, 37);
     flex-direction: column;
-    padding: 10px;
     border-top-left-radius: 10%;
     border-bottom-left-radius: 10%;
 
@@ -124,8 +123,8 @@ p:hover {
 }
 
 .food-image img {
-    width: 200px;
-    height: 168px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     border-top-right-radius: 10%;
     border-bottom-right-radius: 10%;
