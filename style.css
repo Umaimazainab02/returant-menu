@@ -299,7 +299,7 @@ p:hover {
 .food-card1 h3, .food-card1 h4 {
     margin: 5px 0;
     text-align: left;
-    color: beige;
+    color: rgb(255, 255, 255);
 }
 
 .food-card1 button {
@@ -319,3 +319,4 @@ p:hover {
 .food-card1:hover {
     transform: translateY(-5px);      
 }
+
