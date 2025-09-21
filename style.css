@@ -320,3 +320,19 @@ p:hover {
     transform: translateY(-5px);      
 }
 
+.cart-icon {
+  position: left;
+  font-size: 20px; /* icon size */
+}
+
+.cart-icon #cart-count {
+  position: absolute;
+  top: -8px;   /* icon ke upar */
+  right: -10px; /* icon ke right */
+  background: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 5px;
+  border-radius: 50%;
+}
