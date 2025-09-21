@@ -1,7 +1,13 @@
-document.querySelectorAll('.food-items-row button').forEach(button => {
+let cartCount = 0;
+let addToCartButtons = document.querySelectorAll('.add-to-cart');
+const cartCountDisplay = document.querySelector('#cart-count');
+addToCartButtons.forEach(button => {
     button.addEventListener('click', () => {
-        alert('Item added to cart!');
-    });
+        cartCount++;
+        if(cartCountDisplay){
+        cartCountDisplay.textContent = cartCount; 
+        }
+            alert('Item added to cart!');
 
+})
 });
-
