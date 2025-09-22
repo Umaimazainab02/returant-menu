@@ -336,3 +336,32 @@ p:hover {
   padding: 2px 5px;
   border-radius: 50%;
 }
+
+
+#cart-box {
+  position: absolute;
+  top: 60px; /* adjust */
+  right: 10px;
+  width: 200px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.2);
+  display: none; /* hidden by default */
+}
+
+#cart-box.show {
+  display: block;
+}
+
+#cart-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#cart-items li {
+  font-size: 14px;
+  padding: 4px 0;
+  border-bottom: 1px solid #eee;
+}
