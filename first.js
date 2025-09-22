@@ -14,3 +14,9 @@ addToCartButtons.forEach(button => {
 
 })
 });
+cartCountDisplay.forEach(button => {
+    button.addEventListener('click', () => {
+        
+
+})
+});
