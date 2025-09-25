@@ -368,3 +368,19 @@ p:hover {
 
 
 
+/* by default hidden */
+.hidden {
+  display: none;
+}
+
+
+#cart-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#cart-box li {
+  padding: 4px 0;
+  border-bottom: 1px solid #eee;
+}
+
