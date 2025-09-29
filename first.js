@@ -16,7 +16,7 @@ addToCartButtons.forEach(button => {
     const existingItem = cartItems.find(item => item.name === itemName);
 
     if (existingItem) {
-      existingItem.quantity += 1; // quantity increase
+      existingItem.quantity += 1;
     } else {
       cartItems.push({ name: itemName, price: itemPrice, quantity: 1 });
     }
@@ -43,20 +43,20 @@ function renderCartItems() {
 
   cartItems.forEach((item, index) => {
     const li = document.createElement('li');
-
+    li.classList.add('cart-row'); 
     li.innerHTML = `
-      <div>
-        ${item.name} - ${item.price} <br>
-        Quantity: <button class="decrease" data-index="${index}">-</button>
-        ${item.quantity}
+      <div class="row item">${item.name}</div>
+      <div class="row quantity">
+        <button class="decrease" data-index="${index}">-</button>
+        <span>${item.quantity}</span>
         <button class="increase" data-index="${index}">+</button>
       </div>
+      <div class="row price">${item.price}</div>
     `;
 
     cartItemsList.appendChild(li);
   });
 
-  // buttons par click listeners
   document.querySelectorAll('.increase').forEach(btn => {
     btn.addEventListener('click', (e) => {
       const idx = e.target.dataset.index;
@@ -71,11 +71,9 @@ function renderCartItems() {
       if (cartItems[idx].quantity > 1) {
         cartItems[idx].quantity--;
       } else {
-        // agar 1 se kam ho jaye to remove kar do
         cartItems.splice(idx, 1);
       }
       renderCartItems();
     });
   });
 }
-

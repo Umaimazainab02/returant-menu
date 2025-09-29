@@ -370,10 +370,10 @@ p:hover {
 }
 
 #cart-items li {
-    font-size: 14px;
-    padding: 4px 0;
-    border-bottom: none;
-
+    display: grid;
+    grid-template-columns: 1fr 100px 60px;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
 }
 
 
@@ -394,6 +394,73 @@ p:hover {
     font-weight: bold;
     font-size: 14px;
     border: 1px solid #292828;
-    color: #fc7608;
+    color: #030303;
 
 }
+
+.cart-row {
+    display: grid;
+    grid-template-columns: 1fr 120px 60px;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.cart-header {
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+    grid-template-columns: 1fr 120px 60px;
+
+}
+
+.qty-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.qty-controls button {
+    width: 20px;
+    height: 20px;
+    line-height: 18px;
+    text-align: center;
+    background-color: #ff6600;
+    color: #000000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.qty-controls span {
+    min-width: 20px;
+    text-align: center;
+}
+
+#cart-items li.cart-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+#cart-items li.cart-row .row {
+  flex: 1;               
+  text-align: center;   
+  color: rgb(255, 106, 20);
+}
+
+#cart-items li.cart-row .quantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px; 
+}
+
+#cart-items li.cart-row .quantity button {
+  width: 25px;
+  height: 25px;
+}
+
