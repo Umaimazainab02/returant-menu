@@ -7,7 +7,6 @@ const cartBox = document.querySelector('#cart-box');
 
 let cartItems = [];
 
-// add items
 addToCartButtons.forEach(button => {
   button.addEventListener('click', (e) => {
     const foodCard = e.target.closest('.food-card');
@@ -22,12 +21,10 @@ addToCartButtons.forEach(button => {
   });
 });
 
-// show/hide cart box
 cartIcon.addEventListener('click', () => {
   cartBox.classList.toggle('hidden');
 });
 
-// render items in cart box
 function renderCartItems() {
   cartItemsList.innerHTML = '';
   cartItems.forEach(item => {

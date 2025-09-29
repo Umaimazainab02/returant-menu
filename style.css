@@ -320,10 +320,6 @@ p:hover {
     transform: translateY(-5px);      
 }
 
-.cart-icon {
-  position: left;
-  font-size: 20px; /* icon size */
-}
 
 .cart-icon #cart-count {
   position: absolute;
@@ -344,11 +340,10 @@ p:hover {
   right: 10px;
   width: 200px;
   background: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid #fff9f9;
   border-radius: 8px;
   padding: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,.2);
-  display: none; /* hidden by default */
 }
 
 #cart-box.show {
@@ -363,12 +358,10 @@ p:hover {
 #cart-items li {
   font-size: 14px;
   padding: 4px 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #fffefe;
 }
 
 
-
-/* by default hidden */
 .hidden {
   display: none;
 }
@@ -381,6 +374,6 @@ p:hover {
 }
 #cart-box li {
   padding: 4px 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #fffdfd;
 }
 
