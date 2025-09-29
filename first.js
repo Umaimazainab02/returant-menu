@@ -29,7 +29,7 @@ function renderCartItems() {
   cartItemsList.innerHTML = '';
   cartItems.forEach(item => {
     const li = document.createElement('li');
-    li.textContent = `${item.name} - ${item.price}`;
+    li.innerHTML = `${item.name}-${item.price}`;
     cartItemsList.appendChild(li);
   });
 }

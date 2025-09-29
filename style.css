@@ -323,12 +323,12 @@ p:hover {
 
 .cart-icon #cart-count {
   position: absolute;
-  top: -8px;   /* icon ke upar */
-  right: -10px; /* icon ke right */
+  top: -8px;   
+  right: -10px; 
   background: red;
   color: white;
   font-size: 12px;
-  font-weight: bold;
+  font-weight: bolder;
   padding: 2px 5px;
   border-radius: 50%;
 }
@@ -336,15 +336,18 @@ p:hover {
 
 #cart-box {
   position: absolute;
-  top: 60px; /* adjust */
+  top: 60px;
   right: 10px;
   width: 200px;
-  background: #fff;
-  border: 1px solid #fff9f9;
+  background-color: rgb(255, 255, 255);
+  color: #000000;                
   border-radius: 8px;
   padding: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,.2);
+  font-weight: 900px;
+
 }
+
+
 
 #cart-box.show {
   display: block;
@@ -358,7 +361,7 @@ p:hover {
 #cart-items li {
   font-size: 14px;
   padding: 4px 0;
-  border-bottom: 1px solid #fffefe;
+  border-bottom: none;
 }
 
 
@@ -370,10 +373,12 @@ p:hover {
 #cart-box ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 20;
 }
 #cart-box li {
   padding: 4px 0;
-  border-bottom: 1px solid #fffdfd;
+  border-bottom: none;
+    font-weight: bold;
+    font-size: 14px;
 }
 
