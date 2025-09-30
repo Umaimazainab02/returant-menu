@@ -1,4 +1,3 @@
-let cartCount = 0;
 const addToCartButtons = document.querySelectorAll('.add-to-cart');
 const cartCountDisplay = document.querySelector('#cart-count');
 const cartItemsList = document.querySelector('#cart-items');
@@ -7,6 +6,7 @@ const cartBox = document.querySelector('#cart-box');
 
 let cartItems = [];
 
+// add to cart
 addToCartButtons.forEach(button => {
   button.addEventListener('click', (e) => {
     const foodCard = e.target.closest('.food-card , .food-card1');
@@ -20,26 +20,27 @@ addToCartButtons.forEach(button => {
     } else {
       cartItems.push({ name: itemName, price: itemPrice, quantity: 1 });
     }
-    cartCount++;
-    cartCountDisplay.textContent = cartCount;
 
     renderCartItems();
   });
 });
 
+// cart open/close
 cartIcon.addEventListener('click', () => {
   cartBox.classList.toggle('hidden');
 });
 
-
-function renderCartItems() {
-  cartItemsList.innerHTML = '';
+// update cart count
+function updateCartCount() {
+  let total = 0;
   cartItems.forEach(item => {
-    const li = document.createElement('li');
-    li.innerHTML = `${item.name}-${item.price}`;
-    cartItemsList.appendChild(li);
+    total += item.quantity;
   });
-}function renderCartItems() {
+  cartCountDisplay.textContent = total;  // yahan pe directly show ho raha hai
+}
+
+// render cart items
+function renderCartItems() {
   cartItemsList.innerHTML = '';
 
   cartItems.forEach((item, index) => {
@@ -53,11 +54,15 @@ function renderCartItems() {
         <button class="increase" data-index="${index}">+</button>
       </div>
       <div class="row price">${item.price}</div>
+      <div class="row delete">
+        <button class="delete-btn" data-index="${index}">🗑</button>
+      </div>
     `;
 
     cartItemsList.appendChild(li);
   });
 
+  // increase
   document.querySelectorAll('.increase').forEach(btn => {
     btn.addEventListener('click', (e) => {
       const idx = e.target.dataset.index;
@@ -66,6 +71,7 @@ function renderCartItems() {
     });
   });
 
+  // decrease
   document.querySelectorAll('.decrease').forEach(btn => {
     btn.addEventListener('click', (e) => {
       const idx = e.target.dataset.index;
@@ -77,4 +83,16 @@ function renderCartItems() {
       renderCartItems();
     });
   });
+
+  // delete
+  document.querySelectorAll('.delete-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const idx = e.target.dataset.index;
+      cartItems.splice(idx, 1); 
+      renderCartItems();
+    });
+  });
+
+  // last me count update hoga
+  updateCartCount();
 }
