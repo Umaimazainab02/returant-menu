@@ -31,6 +31,7 @@ cartIcon.addEventListener('click', () => {
   cartBox.classList.toggle('hidden');
 });
 
+
 function renderCartItems() {
   cartItemsList.innerHTML = '';
   cartItems.forEach(item => {

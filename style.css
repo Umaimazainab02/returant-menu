@@ -231,26 +231,26 @@ p:hover {
     flex-wrap: wrap;
 }
 
-.food-card {
+.food-card ,.food-card1 {
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: transform 0.3s;
 }
 
-.food-card img {
+.food-card img, .food-card1 img {
     width: 100px;
     border-radius: 10px;
 }
 
 .food-card h3,
-.food-card h4 {
+.food-card h4, .food-card1 h3, .food-card1 h4 {
     margin: 5px 0;
     text-align: left;
     color: beige;
 }
 
-.food-card button {
+.food-card button, .food-card1 button {
     padding: 5px 10px;
     background-color: #ff6600;
     color: white;
@@ -259,12 +259,12 @@ p:hover {
     cursor: pointer;
 }
 
-.food-card button:hover {
+.food-card button:hover, .food-card1 button:hover {
     background-color: #e55b00;
     transform: scale(1.05);
 }
 
-.food-card:hover {
+.food-card:hover, .food-card1:hover {
     transform: translateY(-5px);
 }
 
@@ -284,45 +284,8 @@ p:hover {
 .food-items-row2 {
     display: flex;
     justify-content: space-between;
-    gap: 05px;
+    gap: 03px;
     flex-wrap: wrap;
-}
-
-.food-card1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.3s;
-}
-
-.food-card1 img {
-    width: 100px;
-    border-radius: 10px;
-}
-
-.food-card1 h3,
-.food-card1 h4 {
-    margin: 5px 0;
-    text-align: left;
-    color: rgb(255, 255, 255);
-}
-
-.food-card1 button {
-    padding: 5px 10px;
-    background-color: #ff6600;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.food-card1 button:hover {
-    background-color: #e55b00;
-    transform: scale(1.05);
-}
-
-.food-card1:hover {
-    transform: translateY(-5px);
 }
 
 
@@ -449,7 +412,7 @@ p:hover {
 #cart-items li.cart-row .row {
   flex: 1;               
   text-align: center;   
-  color: rgb(255, 106, 20);
+  color: ergb(255, 106, 20);
 }
 
 #cart-items li.cart-row .quantity {
