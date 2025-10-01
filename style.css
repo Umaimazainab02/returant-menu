@@ -224,22 +224,23 @@ p:hover {
     cursor: pointer;
 }
 
-.food-items-row {
+.food-items-row ,.food-items-row2 {
     display: flex;
-    justify-content: space-between;
     gap: 05px;
     flex-wrap: wrap;
 }
 
-.food-card ,.food-card1 {
+.food-card,
+.food-card1 {
+    flex: 1 1 calc(33.33% - 20px);  /* ek row me 3 items */
+    max-width: 200px;               /* optional: max width fix */
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: transform 0.3s;
 }
-
 .food-card img, .food-card1 img {
-    width: 100px;
+    width: 90px;
     border-radius: 10px;
 }
 
@@ -277,15 +278,6 @@ p:hover {
 
 .card1:hover h1 {
     color: white;
-}
-
-
-
-.food-items-row2 {
-    display: flex;
-    justify-content: space-between;
-    gap: 03px;
-    flex-wrap: wrap;
 }
 
 
